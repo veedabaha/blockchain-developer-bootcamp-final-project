@@ -44,7 +44,6 @@ git clone https://github.com/veedabaha/blockchain-developer-bootcamp-final-proje
 - `build`: When compile the contract this folder created , its save **data/abi** .
 - `migrations`: Migration files for deploying contracts in `contracts` directory.
 - `vapp`: Project's Vue frontend.
-- 
 - `test` : this is where the tests are stored. The test is written in truffle.
 
 
