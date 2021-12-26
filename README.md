@@ -10,3 +10,18 @@ Blockchian has many facilities to builds some immutability ,transparency and dec
 4.The engineers can able to offer to the customer's tasks
 
 5.If the customer acceptes the offer of the engineer payed the value of that task at three times
+# Contracts
+Clone code git clone https://github.com/SodabaOloumi/blockchain-developer-bootcamp-final-project.git
+
+Run npm install in root to install Truffle build and smart contract dependencies
+
+Run local testnet in port 7545 with an Ethereum client, e.g. Ganache
+
+truffle migrate --network development
+
+In truffle-config.js file , Fill in the following below.
+
+MNEMONIC=" your mnemonic here in quotes"
+INFURA_URL=insert your infura url
+truffle migrate --network ropsten
+Run tests truffle test
