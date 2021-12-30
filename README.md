@@ -12,7 +12,7 @@ Blockchian has many facilities to builds some immutability ,transparency and dec
 5.The engineers can able to offer to the customer's tasks.
 
 6.If the customer acceptes the offer of the engineer payed the value of that task. 
-<<<<<<< HEAD
+
 # Contracts
 Clone code git clone ``https://github.com/veedabaha/blockchain-developer-bootcamp-final-project.git``
 
@@ -69,6 +69,3 @@ git clone https://github.com/veedabaha/blockchain-developer-bootcamp-final-proje
 - `test` : this is where the tests are stored. The test is written in truffle.
 
 
-
-
->>>>>>> bb8c9458394234f5b8d272235fd23f9110fc4ee1
