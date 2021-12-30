@@ -14,7 +14,7 @@ Blockchian has many facilities to builds some immutability ,transparency and dec
 6.If the customer acceptes the offer of the engineer payed the value of that task. 
 <<<<<<< HEAD
 # Contracts
-Clone code git clone https://github.com/veedabaha/blockchain-developer-bootcamp-final-project.git
+Clone code git clone ``https://github.com/veedabaha/blockchain-developer-bootcamp-final-project.git``
 
 Run npm install in root to install Truffle build and smart contract dependencies
 
