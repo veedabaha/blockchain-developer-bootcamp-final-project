@@ -30,11 +30,11 @@ INFURA_URL=insert your infura url
 
 truffle migrate --network ropsten
 
-Run tests `truffle test`
+Run tests truffle test
 =======
 
 # Prerequisites
-- Node.js >= v17
+- Node.js >= v16
 - Truffle and Ganache
 - npm
 # Contracts
@@ -55,12 +55,12 @@ git clone https://github.com/veedabaha/blockchain-developer-bootcamp-final-proje
 # Frontend
 - `cd vapp`
 - `npm install`
-- `npm run serve`
-- Open `http://localhost:8080` 
+- `npm run dev`
+- Open `http://localhost:3000` 
 
 # structure
 -`contracts`:  In this folder, the InterfaceOfCuntract.sol interface of the contract and have abstract methods.
-   And contract SmallDailyBusiness.sol is the main contract.
+   And contract SmallBusiness.sol is the main contract.
 -`truffle test`
 
 - `build`: When compile the contract this folder created , its save **data/abi** .
