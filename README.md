@@ -55,8 +55,8 @@ git clone https://github.com/veedabaha/blockchain-developer-bootcamp-final-proje
 # Frontend
 - `cd vapp`
 - `npm install`
-- `npm run dev`
-- Open `http://localhost:3000` 
+- `npm run serve`
+- Open `http://localhost:8080/` 
 
 # structure
 -`contracts`:  In this folder, the InterfaceOfCuntract.sol interface of the contract and have abstract methods.
