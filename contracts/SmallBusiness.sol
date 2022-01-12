@@ -1,7 +1,7 @@
 
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.24 <0.9.0;
-// @title supply chain in small daily business 
+/// @title supply chain in small daily business 
 /// @author veeda baha - <veedabaha@gmail.com>
 /// Allows the customer to add their project or works in to the network.
 /// Projects can be accessed by customers and Engineers .
@@ -51,6 +51,7 @@ contract SmallBusiness is InterfaceOfCuntract{
         string skills;
         string information;
         uint averageOfprice;
+        uint id;
      
     }
 
@@ -153,10 +154,7 @@ contract SmallBusiness is InterfaceOfCuntract{
     //add customer`s address in to mapping
     //add the parameters of customer in to struct
     
-    function addCustomer(address payable customerAddress , 
-    string memory yourName) 
-    public override 
-    returns(bool) {
+    function addCustomer(address payable customerAddress , string memory yourName) public override returns(bool) {
         require(customers[customerAddress].customerAddress == address(0),
         "this address is already registred");
         customers[customerAddress]=customer({
@@ -191,12 +189,7 @@ contract SmallBusiness is InterfaceOfCuntract{
     ///check the modifier is customer to call that function 
     ///the customer should call that function
     
-    function addProject(string memory Name,
-    string memory skills,string memory information
-    ,uint averageOfprice ) 
-    public override payable 
-    verifyCaller(msg.sender) 
-    returns(bool){
+    function addProject(string memory Name,string memory skills,string memory information,uint averageOfprice , uint _id) public override payable verifyCaller(msg.sender) returns(bool){
         require(projects[msg.sender].owner == address(0), 
         "this project already is exist.");
         require(msg.value>=averageOfprice,
@@ -207,7 +200,8 @@ contract SmallBusiness is InterfaceOfCuntract{
             skills:skills,
             information:information,
             averageOfprice:averageOfprice,
-            state:State.forSell
+            state:State.forSell,
+            id: _id
            
              });
         deal = deal + 1;
@@ -226,8 +220,34 @@ contract SmallBusiness is InterfaceOfCuntract{
         emit chooseTheProject(msg.sender,price);
         return "set value on project";
     }
-
-    function accepteCustomer(address payable _engineerAddress) public payable override isCustomer(msg.sender) forSell(msg.sender) returns(bool) {
+  
+    function accepteCustomer(address payable _engineerAddress ) public payable override isCustomer(msg.sender) forSell(msg.sender) returns(bool) {
+        require(Engineers[_engineerAddress].engineerAddress == _engineerAddress ,
+            "this account is not an engineer");
+        require(customers[msg.sender].customerAddress == msg.sender ,
+            "this customer is not Exist.");
+        offer storage o = offers[_engineerAddress];
+        Engineer storage e = Engineers[_engineerAddress];
+        address payable to = e.engineerAddress; 
+        uint value  = (o.price * 20)/100;
+        to.transfer(value *(1 ether));
+        return true;
+    }
+    
+  
+    function halfPayment(address _engineerAddress) public payable isCustomer(msg.sender){
+        require(Engineers[_engineerAddress].engineerAddress == _engineerAddress ,
+            "this account is not an engineer");
+        require(customers[msg.sender].customerAddress == msg.sender ,
+            "this customer is not Exist.");
+       
+        offer storage o = offers[_engineerAddress];
+        Engineer storage e = Engineers[_engineerAddress];
+        address payable to = e.engineerAddress; 
+        uint value  = (o.price * 50)/100;
+        to.transfer(value *(1 ether));
+    }
+    function finishTheProject(address _engineerAddress) public payable isCustomer(msg.sender) {
         require(Engineers[_engineerAddress].engineerAddress == _engineerAddress ,
             "this account is not an engineer");
         require(customers[msg.sender].customerAddress == msg.sender ,
@@ -237,49 +257,22 @@ contract SmallBusiness is InterfaceOfCuntract{
         offer storage o = offers[_engineerAddress];
         Engineer storage e = Engineers[_engineerAddress];
         address payable to = e.engineerAddress; 
-        to.transfer(o.price *(1 ether));
-        return true;
+        uint value  = (o.price * 20)/100;
+        to.transfer(value *(1 ether));
     }
 
-    function EditProject(string memory _name,
-        string memory _skills,
-        string memory _information,uint _averageOfprice )
-        public override
-        verifyCaller(msg.sender)
-        forSell(msg.sender)
-        returns (string memory)   
-        { 
-      
-        Project memory p = projects[msg.sender];
-           p.owner = msg.sender;
-           p.Name = _name;
-           p.state= State.forSell;
-           p.skills= _skills;
-           p.information = _information;
-           p. averageOfprice = _averageOfprice;
-          
-             
-        
-        return "the project was update"; 
+    function _passthevalue() public returns(string memory){
+        Project storage p = projects[msg.sender];
+        require(p.state == State.Finish ,"this project was not finish");
+        address payable to = customers[msg.sender].customerAddress ; 
+        uint value = address(this).balance;
+        to.transfer(value);
+        _deleteProject(msg.sender);
+        return "the value is return";
     }
-
-    // get project parameters
-    function getProject(address _customerAddress) public view override 
-    verifyCaller(msg.sender) 
-    forSell(_customerAddress)
-    returns (string memory Name,string memory skills,
-    string memory information,uint averageOfprice )   
-    {
-        Project storage p = projects[_customerAddress];
-        return (p.Name,p.skills,p.information,p.averageOfprice  ); 
-    }
-    
 
     //can delete the project with the id of project
-    function deleteProject(address _customerAddress) 
-    public override 
-    isCustomer(msg.sender) 
-    returns(string memory){
+    function _deleteProject(address _customerAddress) private isCustomer(msg.sender) returns(string memory){
 
         Project storage p = projects[_customerAddress];
         p.owner= address(0);
@@ -290,30 +283,36 @@ contract SmallBusiness is InterfaceOfCuntract{
         
         return "the project was delete";
 
+    
     }
+      // get project parameters
+    function getProject(address _customerAddress) public view override verifyCaller(msg.sender) forSell(_customerAddress)returns (string memory Name,string memory skills, string memory information,uint averageOfprice , uint id )   
+    {
+        Project storage p = projects[_customerAddress];
+        return (p.Name,p.skills,p.information,p.averageOfprice  , p.id ); 
+    }
+    
 
-
-    // function paymentFull() public view  returns(uint){
-    //     uint day =offers[msg.sender].day;
-    //     uint a =day-(day*1/2);
-    //     // require(offers[msg.sender].day == a )
-    //     return a;
-
-    // }
-
-
-    function _passthevalue() public returns(string memory){
-        Project storage p = projects[msg.sender];
-        require(p.state == State.Finish ,"this project was not finish");
-        address payable to = customers[msg.sender].customerAddress ; 
-        uint value = address(this).balance;
-        to.transfer(value);
-        return "the value is return";
+    //the edit function
+    function EditProject(string memory Name,string memory skills,string memory information,uint averageOfprice,uint id)public override verifyCaller(msg.sender) forSell(msg.sender) returns (string memory)  { 
+      
+        projects[msg.sender] = Project({
+            owner:msg.sender,
+            Name:Name,
+            state:State.forSell,
+            skills:skills,
+            information:information,
+            averageOfprice:averageOfprice,
+            id:id
+             });
+        deal = deal + 1;
+        return "the project was update"; 
     }
 
     function getBalance() external view returns(uint){
         return address(this).balance;
     }
 
+   
 
 }
