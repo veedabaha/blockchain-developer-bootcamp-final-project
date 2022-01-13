@@ -39,17 +39,17 @@ const App = {
       from: this.account
     });
   },
-  addProject: async function(Name, skills,information, averageOfprice) {
+  addProject: async function(Name, skills,information, averageOfprice , id) {
     
     const { addProject } = this.meta.methods;
-    await addProject( Name, skills,information, averageOfprice).send({
+    await addProject( Name, skills,information, averageOfprice , id).send({
       from: this.account,
       value: this.web3.utils.toWei("1", "ether")
     });
   },
-  EditProject: async function EditProject(Name, skills,information, averageOfprice) {
+  EditProject: async function EditProject(Name, skills,information, averageOfprice ,id) {
     const { EditProject } = this.meta.methods;
-    await EditProject(Name, skills,information, averageOfprice).send({
+    await EditProject(Name, skills,information, averageOfprice ,id).send({
       from: this.account
     });
    
@@ -59,12 +59,38 @@ const App = {
     let p= await getProject(_customerAddress ).call();
     return p;
   },
-  // revorkPermission: async function revorkPermission( _patientAddress, _viewner, _recordName  ) {
-  //   const { revorkPermission } = this.meta.methods;
-  //   await revorkPermission(_patientAddress, _viewner, _recordName ).send({
-  //     from: this.account
-  //   });
-
+  
+  chooseToWork: async function chooseToWork( _customerAddress ,day,  price ,information  ) {
+    const { chooseToWork } = this.meta.methods;
+    await chooseToWork(_customerAddress ,day,  price ,information  ).send({
+      from: this.account
+    });
+  },
+  accepteCustomer: async function accepteCustomer( _engineerAddress  ) {
+    const { accepteCustomer } = this.meta.methods;
+    await accepteCustomer(_engineerAddress).send({
+      from: this.account
+    });
+    
+  },
+  halfPayment : async function halfPayment( _engineerAddress  ) {
+    const { halfPayment } = this.meta.methods;
+    await halfPayment(_engineerAddress).send({
+      from: this.account
+    }); 
+  },
+  finishTheProject: async function finishTheProject( _engineerAddress  ) {
+    const { finishTheProject } = this.meta.methods;
+    await finishTheProject(_engineerAddress).send({
+      from: this.account
+    }); 
+  },
+  _passthevalue: async function _passthevalue(  ) {
+    const { _passthevalue } = this.meta.methods;
+    await _passthevalue().send({
+      from: this.account
+    }); 
+  },
   
  
 };

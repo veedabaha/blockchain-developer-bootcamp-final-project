@@ -4,10 +4,7 @@ const app = express();
 const cors=require('cors');
 const router = require ('./router/index');
 const bodyParser = require('body-parser');
-const mongoose=require('mongoose')
-// app.set('view engine','ejs');
-// app.set('views','views');
-// app.use(express.static(path.join(rootDir, 'public')));
+const mongoose=require('mongoose');
 app.use(bodyParser.json());
 app.use(cors());
 process.env.SECRET_KEY="secret"
@@ -16,15 +13,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.use(router);
 
-// sequelize.sync()
-// .then(result =>{
-    
-// })
-// .catch(err =>{
-//     //consolele.log(err);
-// })
-
-mongoose.connect( "mongodb://localhost:27017/obj")
+mongoose.connect( "mongodb://localhost:27017/project")
 .then(()=>{
     console.log('mongodb')
     app.listen(3000);

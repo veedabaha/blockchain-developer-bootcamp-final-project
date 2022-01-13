@@ -4,26 +4,25 @@ const mongoose = require('mongoose');
 
 const projectSchema= mongoose.Schema(
   {
-    id:{
-     type:Number
-    },
-    Name: {
+    
+    customerAddress: {
       type: String
       
     },
-    skills: {
+    day: {
       type: String
     },
+    price: {
+        type: Number
+      },
     information: {
       type: String
     },
-    averageOfprice: {
-      type: Number
-    }
+    
   
  
 })
 
 
-const Project= mongoose.model("project",projectSchema);
-module.exports = Project;
+const Enginer= mongoose.model("enginer",projectSchema);
+module.exports = Enginer;

@@ -29,13 +29,16 @@ interface InterfaceOfCuntract {
     function addEngineer( address payable _engineerAddress, string memory _yourName) external returns (bool);
 
     ///  Allows to add a project by customer in the network.
-    function addProject(string memory yourName,string memory skills,string memory information,uint averageOfprice) external payable returns(bool);
+    function addProject(string memory yourName,string memory skills,
+    string memory information,uint averageOfprice , uint id) external payable returns(bool);
 
     ///  Allows to Edit a project that customer add in the network.
-    function EditProject(string memory yourName,string memory skills,string memory information,uint averageOfprice) external returns (string memory);
+    function EditProject(string memory yourName,string memory skills,
+    string memory information,uint averageOfprice ,uint id ) external returns (string memory);
    
     ///  Allows a Engineer and customer and users for view the project.
-    function getProject(address _customerAddress) external view returns(string memory yourName,string memory skills,string memory information,uint averageOfprice);
+    function getProject(address _customerAddress) external view returns(string memory yourName,
+    string memory skills,string memory information,uint averageOfprice , uint id);
 
     ///  Allows a Engineer set a favorite price project.
    function chooseToWork(address _customerAddress,uint day,uint price,string memory moreInfo) external  returns(string memory);
@@ -43,6 +46,4 @@ interface InterfaceOfCuntract {
     ///  Allows a customer for view the price of the project that engineer add it and payed that price.
     function accepteCustomer(address payable _engineerAddress) external payable returns(bool);
 
-    /// Allows the customer for delete the project
-    function deleteProject(address _customerAddress) external returns(string memory);
 }

@@ -8,7 +8,8 @@ import addcustomer from "../views/addcustomer.vue";
 import addProject from "../views/addProject.vue";
 import Projects from "../views/Projects.vue";
 import EditProject from "../views/EditProject.vue";
-import setPrice from "../views/setPrice.vue";
+import chooseProject from "../views/chooseProject";
+import enginer from "../views/enginer"
 
 Vue.use(VueRouter);
 const routes = [
@@ -16,6 +17,16 @@ const routes = [
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/enginer',
+      name: 'enginer',
+      component: enginer
+    },
+    {
+      path: '/chooseProject',
+      name: 'chooseProject',
+      component: chooseProject
     },
     {
       path: '/about',
@@ -48,11 +59,6 @@ const routes = [
       path: '/ProjectEdit',
       name: 'EditProject',
       component:EditProject
-    },
-    {
-      path: '/setPrice',
-      name: 'setPrice',
-      component:setPrice
     }
 
   ]

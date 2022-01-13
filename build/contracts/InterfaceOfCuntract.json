@@ -70,6 +70,11 @@
           "internalType": "uint256",
           "name": "averageOfprice",
           "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
         }
       ],
       "name": "addProject",
@@ -103,6 +108,11 @@
         {
           "internalType": "uint256",
           "name": "averageOfprice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "id",
           "type": "uint256"
         }
       ],
@@ -145,6 +155,11 @@
         {
           "internalType": "uint256",
           "name": "averageOfprice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "id",
           "type": "uint256"
         }
       ],
@@ -203,28 +218,9 @@
       ],
       "stateMutability": "payable",
       "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_customerAddress",
-          "type": "address"
-        }
-      ],
-      "name": "deleteProject",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "nonpayable",
-      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"yourName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"skills\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"information\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"averageOfprice\",\"type\":\"uint256\"}],\"name\":\"EditProject\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_engineerAddress\",\"type\":\"address\"}],\"name\":\"accepteCustomer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"customerAddress\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"yourName\",\"type\":\"string\"}],\"name\":\"addCustomer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_engineerAddress\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_yourName\",\"type\":\"string\"}],\"name\":\"addEngineer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"yourName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"skills\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"information\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"averageOfprice\",\"type\":\"uint256\"}],\"name\":\"addProject\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_customerAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"day\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"moreInfo\",\"type\":\"string\"}],\"name\":\"chooseToWork\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_customerAddress\",\"type\":\"address\"}],\"name\":\"deleteProject\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_customerAddress\",\"type\":\"address\"}],\"name\":\"getProject\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"yourName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"skills\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"information\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"averageOfprice\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"veeda baha - <veedabaha@gmail.com> Allows the customer to add their project or works in to the network. Projects can be accessed by customers and Engineers . The customers can be shared or add ,get,edit and delete their projects  The engineers can allow to see the record of the project. after the Engineer select a project for doing that set a value or price to that project. The custommer can see the price or value that Engineer add in to the system. The finally the customer can accepte one of thoes values and payed the ether to engineer.\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"EditProject(string,string,string,uint256)\":{\"notice\":\"Allows to Edit a project that customer add in the network.\"},\"accepteCustomer(address)\":{\"notice\":\"Allows a customer for view the price of the project that engineer add it and payed that price.\"},\"addCustomer(address,string)\":{\"notice\":\"Allows to add a new customer in the network.\"},\"addEngineer(address,string)\":{\"notice\":\"Allows to add a new engineer in the network.\"},\"addProject(string,string,string,uint256)\":{\"notice\":\"Allows to add a project by customer in the network.\"},\"chooseToWork(address,uint256,uint256,string)\":{\"notice\":\"Allows a Engineer set a favorite price project.\"},\"deleteProject(address)\":{\"notice\":\"Allows the customer for delete the project\"},\"getProject(address)\":{\"notice\":\"Allows a Engineer and customer and users for view the project.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/sodaba ulomi/Desktop/wslapp/contracts/InterfaceOfCuntract.sol\":\"InterfaceOfCuntract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/sodaba ulomi/Desktop/wslapp/contracts/InterfaceOfCuntract.sol\":{\"keccak256\":\"0x96deec6fe7e5f3a97ea5b3bd86c3f535adae9cf7fcc98d690fe47bf85fc377e7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e13d14dca65152282933847b87e9c2bc6e0d9a82fb6119b24f8e0efc973498c4\",\"dweb:/ipfs/QmRMorQDnbFcRu1RosgcNdVKktjYEZZssg6rh1VwyJV6sa\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"yourName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"skills\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"information\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"averageOfprice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"EditProject\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_engineerAddress\",\"type\":\"address\"}],\"name\":\"accepteCustomer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"customerAddress\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"yourName\",\"type\":\"string\"}],\"name\":\"addCustomer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_engineerAddress\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_yourName\",\"type\":\"string\"}],\"name\":\"addEngineer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"yourName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"skills\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"information\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"averageOfprice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"addProject\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_customerAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"day\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"moreInfo\",\"type\":\"string\"}],\"name\":\"chooseToWork\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_customerAddress\",\"type\":\"address\"}],\"name\":\"getProject\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"yourName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"skills\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"information\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"averageOfprice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"veeda baha - <veedabaha@gmail.com> Allows the customer to add their project or works in to the network. Projects can be accessed by customers and Engineers . The customers can be shared or add ,get,edit and delete their projects  The engineers can allow to see the record of the project. after the Engineer select a project for doing that set a value or price to that project. The custommer can see the price or value that Engineer add in to the system. The finally the customer can accepte one of thoes values and payed the ether to engineer.\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"EditProject(string,string,string,uint256,uint256)\":{\"notice\":\"Allows to Edit a project that customer add in the network.\"},\"accepteCustomer(address)\":{\"notice\":\"Allows a customer for view the price of the project that engineer add it and payed that price.\"},\"addCustomer(address,string)\":{\"notice\":\"Allows to add a new customer in the network.\"},\"addEngineer(address,string)\":{\"notice\":\"Allows to add a new engineer in the network.\"},\"addProject(string,string,string,uint256,uint256)\":{\"notice\":\"Allows to add a project by customer in the network.\"},\"chooseToWork(address,uint256,uint256,string)\":{\"notice\":\"Allows a Engineer set a favorite price project.\"},\"getProject(address)\":{\"notice\":\"Allows a Engineer and customer and users for view the project.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/sodaba ulomi/Desktop/wslapp/contracts/InterfaceOfCuntract.sol\":\"InterfaceOfCuntract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/sodaba ulomi/Desktop/wslapp/contracts/InterfaceOfCuntract.sol\":{\"keccak256\":\"0x566185cdd0167ee0c87c95d28ecebd97bdf6f03f6291267c94a104b236167921\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://89c42669cac060747a9e2ddbea4ca340f157aca62c9a91d920880dc9b19df986\",\"dweb:/ipfs/QmWrjoF28QUjBcy55D1YdQGtMKqBvBGqxAaiKnk51Ag3aQ\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -232,16 +228,16 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.24 <0.9.0;\n\n// @title supply chain in small daily business \n/// @author veeda baha - <veedabaha@gmail.com>\n/// Allows the customer to add their project or works in to the network.\n/// Projects can be accessed by customers and Engineers .\n/// The customers can be shared or add ,get,edit and delete their projects \n/// The engineers can allow to see the record of the project.\n/// after the Engineer select a project for doing that set a value or price to that project.\n/// The custommer can see the price or value that Engineer add in to the system.\n/// The finally the customer can accepte one of thoes values and payed the ether to engineer.\n\n\ninterface InterfaceOfCuntract {\n\n    /// @dev Fallback function allows to deposit ether.\n  //  Fallback() public payable ;\n \n    /*\n    * Public functions\n    */\n\n\n    ///  Allows to add a new customer in the network.\n    function addCustomer(address payable customerAddress , string memory yourName)external returns (bool) ;\n\n    ///  Allows to add a new engineer in the network.\n    function addEngineer( address payable _engineerAddress, string memory _yourName) external returns (bool);\n\n    ///  Allows to add a project by customer in the network.\n    function addProject(string memory yourName,string memory skills,string memory information,uint averageOfprice) external payable returns(bool);\n\n    ///  Allows to Edit a project that customer add in the network.\n    function EditProject(string memory yourName,string memory skills,string memory information,uint averageOfprice) external returns (string memory);\n   \n    ///  Allows a Engineer and customer and users for view the project.\n    function getProject(address _customerAddress) external view returns(string memory yourName,string memory skills,string memory information,uint averageOfprice);\n\n    ///  Allows a Engineer set a favorite price project.\n   function chooseToWork(address _customerAddress,uint day,uint price,string memory moreInfo) external  returns(string memory);\n\n    ///  Allows a customer for view the price of the project that engineer add it and payed that price.\n    function accepteCustomer(address payable _engineerAddress) external payable returns(bool);\n\n    /// Allows the customer for delete the project\n    function deleteProject(address _customerAddress) external returns(string memory);\n}\n",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.24 <0.9.0;\n\n// @title supply chain in small daily business \n/// @author veeda baha - <veedabaha@gmail.com>\n/// Allows the customer to add their project or works in to the network.\n/// Projects can be accessed by customers and Engineers .\n/// The customers can be shared or add ,get,edit and delete their projects \n/// The engineers can allow to see the record of the project.\n/// after the Engineer select a project for doing that set a value or price to that project.\n/// The custommer can see the price or value that Engineer add in to the system.\n/// The finally the customer can accepte one of thoes values and payed the ether to engineer.\n\n\ninterface InterfaceOfCuntract {\n\n    /// @dev Fallback function allows to deposit ether.\n  //  Fallback() public payable ;\n \n    /*\n    * Public functions\n    */\n\n\n    ///  Allows to add a new customer in the network.\n    function addCustomer(address payable customerAddress , string memory yourName)external returns (bool) ;\n\n    ///  Allows to add a new engineer in the network.\n    function addEngineer( address payable _engineerAddress, string memory _yourName) external returns (bool);\n\n    ///  Allows to add a project by customer in the network.\n    function addProject(string memory yourName,string memory skills,\n    string memory information,uint averageOfprice , uint id) external payable returns(bool);\n\n    ///  Allows to Edit a project that customer add in the network.\n    function EditProject(string memory yourName,string memory skills,\n    string memory information,uint averageOfprice ,uint id ) external returns (string memory);\n   \n    ///  Allows a Engineer and customer and users for view the project.\n    function getProject(address _customerAddress) external view returns(string memory yourName,\n    string memory skills,string memory information,uint averageOfprice , uint id);\n\n    ///  Allows a Engineer set a favorite price project.\n   function chooseToWork(address _customerAddress,uint day,uint price,string memory moreInfo) external  returns(string memory);\n\n    ///  Allows a customer for view the price of the project that engineer add it and payed that price.\n    function accepteCustomer(address payable _engineerAddress) external payable returns(bool);\n\n}\n",
   "sourcePath": "C:\\Users\\sodaba ulomi\\Desktop\\wslapp\\contracts\\InterfaceOfCuntract.sol",
   "ast": {
     "absolutePath": "/C/Users/sodaba ulomi/Desktop/wslapp/contracts/InterfaceOfCuntract.sol",
     "exportedSymbols": {
       "InterfaceOfCuntract": [
-        95
+        93
       ]
     },
-    "id": 96,
+    "id": 94,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
@@ -271,9 +267,9 @@
           "text": "@author veeda baha - <veedabaha@gmail.com>\n Allows the customer to add their project or works in to the network.\n Projects can be accessed by customers and Engineers .\n The customers can be shared or add ,get,edit and delete their projects \n The engineers can allow to see the record of the project.\n after the Engineer select a project for doing that set a value or price to that project.\n The custommer can see the price or value that Engineer add in to the system.\n The finally the customer can accepte one of thoes values and payed the ether to engineer."
         },
         "fullyImplemented": false,
-        "id": 95,
+        "id": 93,
         "linearizedBaseContracts": [
-          95
+          93
         ],
         "name": "InterfaceOfCuntract",
         "nodeType": "ContractDefinition",
@@ -385,7 +381,7 @@
               ],
               "src": "1017:6:0"
             },
-            "scope": 95,
+            "scope": 93,
             "src": "922:103:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -498,7 +494,7 @@
               ],
               "src": "1183:6:0"
             },
-            "scope": 95,
+            "scope": 93,
             "src": "1085:105:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -511,15 +507,15 @@
               "src": "1196:56:0",
               "text": "Allows to add a project by customer in the network."
             },
-            "functionSelector": "20943f7a",
-            "id": 36,
+            "functionSelector": "d026c425",
+            "id": 38,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addProject",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 32,
+              "id": 34,
               "nodeType": "ParameterList",
               "parameters": [
                 {
@@ -528,7 +524,7 @@
                   "mutability": "mutable",
                   "name": "yourName",
                   "nodeType": "VariableDeclaration",
-                  "scope": 36,
+                  "scope": 38,
                   "src": "1277:22:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -554,7 +550,7 @@
                   "mutability": "mutable",
                   "name": "skills",
                   "nodeType": "VariableDeclaration",
-                  "scope": 36,
+                  "scope": 38,
                   "src": "1300:20:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -580,8 +576,8 @@
                   "mutability": "mutable",
                   "name": "information",
                   "nodeType": "VariableDeclaration",
-                  "scope": 36,
-                  "src": "1321:25:0",
+                  "scope": 38,
+                  "src": "1326:25:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -592,7 +588,7 @@
                     "id": 28,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1321:6:0",
+                    "src": "1326:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -606,8 +602,8 @@
                   "mutability": "mutable",
                   "name": "averageOfprice",
                   "nodeType": "VariableDeclaration",
-                  "scope": 36,
-                  "src": "1347:19:0",
+                  "scope": 38,
+                  "src": "1352:19:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -618,7 +614,33 @@
                     "id": 30,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1347:4:0",
+                    "src": "1352:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38,
+                  "src": "1374:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1374:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -627,20 +649,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1276:91:0"
+              "src": "1276:106:0"
             },
             "returnParameters": {
-              "id": 35,
+              "id": 37,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 34,
+                  "id": 36,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 36,
-                  "src": "1393:4:0",
+                  "scope": 38,
+                  "src": "1408:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -648,10 +670,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 33,
+                    "id": 35,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1393:4:0",
+                    "src": "1408:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -660,66 +682,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1392:6:0"
+              "src": "1407:6:0"
             },
-            "scope": 95,
-            "src": "1257:142:0",
+            "scope": 93,
+            "src": "1257:157:0",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 37,
+              "id": 39,
               "nodeType": "StructuredDocumentation",
-              "src": "1405:63:0",
+              "src": "1420:63:0",
               "text": "Allows to Edit a project that customer add in the network."
             },
-            "functionSelector": "aede6098",
-            "id": 50,
+            "functionSelector": "3c75c5fd",
+            "id": 54,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "EditProject",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 46,
+              "id": 50,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39,
+                  "id": 41,
                   "mutability": "mutable",
                   "name": "yourName",
                   "nodeType": "VariableDeclaration",
-                  "scope": 50,
-                  "src": "1494:22:0",
-                  "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 38,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1494:6:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 41,
-                  "mutability": "mutable",
-                  "name": "skills",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 50,
-                  "src": "1517:20:0",
+                  "scope": 54,
+                  "src": "1509:22:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -730,7 +726,7 @@
                     "id": 40,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1517:6:0",
+                    "src": "1509:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -742,10 +738,10 @@
                   "constant": false,
                   "id": 43,
                   "mutability": "mutable",
-                  "name": "information",
+                  "name": "skills",
                   "nodeType": "VariableDeclaration",
-                  "scope": 50,
-                  "src": "1538:25:0",
+                  "scope": 54,
+                  "src": "1532:20:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -756,7 +752,7 @@
                     "id": 42,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1538:6:0",
+                    "src": "1532:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -768,10 +764,36 @@
                   "constant": false,
                   "id": 45,
                   "mutability": "mutable",
+                  "name": "information",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54,
+                  "src": "1558:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 44,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1558:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 47,
+                  "mutability": "mutable",
                   "name": "averageOfprice",
                   "nodeType": "VariableDeclaration",
-                  "scope": 50,
-                  "src": "1564:19:0",
+                  "scope": 54,
+                  "src": "1584:19:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -779,10 +801,36 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 44,
+                    "id": 46,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1564:4:0",
+                    "src": "1584:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 49,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54,
+                  "src": "1605:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 48,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1605:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -791,20 +839,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1493:91:0"
+              "src": "1508:106:0"
             },
             "returnParameters": {
-              "id": 49,
+              "id": 53,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 48,
+                  "id": 52,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 50,
-                  "src": "1603:13:0",
+                  "scope": 54,
+                  "src": "1633:13:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -812,10 +860,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 47,
+                    "id": 51,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1603:6:0",
+                    "src": "1633:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -824,40 +872,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1602:15:0"
+              "src": "1632:15:0"
             },
-            "scope": 95,
-            "src": "1473:145:0",
+            "scope": 93,
+            "src": "1488:160:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 51,
+              "id": 55,
               "nodeType": "StructuredDocumentation",
-              "src": "1627:67:0",
+              "src": "1657:67:0",
               "text": "Allows a Engineer and customer and users for view the project."
             },
             "functionSelector": "f9870705",
-            "id": 64,
+            "id": 70,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getProject",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 54,
+              "id": 58,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 53,
+                  "id": 57,
                   "mutability": "mutable",
                   "name": "_customerAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 64,
-                  "src": "1719:24:0",
+                  "scope": 70,
+                  "src": "1749:24:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -865,10 +913,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 52,
+                    "id": 56,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1719:7:0",
+                    "src": "1749:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -878,72 +926,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1718:26:0"
+              "src": "1748:26:0"
             },
             "returnParameters": {
-              "id": 63,
+              "id": 69,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56,
+                  "id": 60,
                   "mutability": "mutable",
                   "name": "yourName",
                   "nodeType": "VariableDeclaration",
-                  "scope": 64,
-                  "src": "1767:22:0",
-                  "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 55,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1767:6:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 58,
-                  "mutability": "mutable",
-                  "name": "skills",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 64,
-                  "src": "1790:20:0",
-                  "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 57,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1790:6:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 60,
-                  "mutability": "mutable",
-                  "name": "information",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 64,
-                  "src": "1811:25:0",
+                  "scope": 70,
+                  "src": "1797:22:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -954,7 +950,7 @@
                     "id": 59,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1811:6:0",
+                    "src": "1797:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -966,10 +962,62 @@
                   "constant": false,
                   "id": 62,
                   "mutability": "mutable",
+                  "name": "skills",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "1825:20:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1825:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 64,
+                  "mutability": "mutable",
+                  "name": "information",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "1846:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1846:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 66,
+                  "mutability": "mutable",
                   "name": "averageOfprice",
                   "nodeType": "VariableDeclaration",
-                  "scope": 64,
-                  "src": "1837:19:0",
+                  "scope": 70,
+                  "src": "1872:19:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -977,10 +1025,36 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 61,
+                    "id": 65,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1837:4:0",
+                    "src": "1872:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 68,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "1894:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 67,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1894:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -989,40 +1063,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1766:91:0"
+              "src": "1796:106:0"
             },
-            "scope": 95,
-            "src": "1699:159:0",
+            "scope": 93,
+            "src": "1729:174:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 65,
+              "id": 71,
               "nodeType": "StructuredDocumentation",
-              "src": "1864:52:0",
+              "src": "1909:52:0",
               "text": "Allows a Engineer set a favorite price project."
             },
             "functionSelector": "78e4f934",
-            "id": 78,
+            "id": 84,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "chooseToWork",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 74,
+              "id": 80,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 67,
+                  "id": 73,
                   "mutability": "mutable",
                   "name": "_customerAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "1942:24:0",
+                  "scope": 84,
+                  "src": "1987:24:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1030,10 +1104,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 66,
+                    "id": 72,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1942:7:0",
+                    "src": "1987:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1044,12 +1118,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 69,
+                  "id": 75,
                   "mutability": "mutable",
                   "name": "day",
                   "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "1967:8:0",
+                  "scope": 84,
+                  "src": "2012:8:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1057,10 +1131,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 68,
+                    "id": 74,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1967:4:0",
+                    "src": "2012:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1070,12 +1144,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 71,
+                  "id": 77,
                   "mutability": "mutable",
                   "name": "price",
                   "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "1976:10:0",
+                  "scope": 84,
+                  "src": "2021:10:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1083,10 +1157,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 70,
+                    "id": 76,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1976:4:0",
+                    "src": "2021:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1096,12 +1170,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 73,
+                  "id": 79,
                   "mutability": "mutable",
                   "name": "moreInfo",
                   "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "1987:22:0",
+                  "scope": 84,
+                  "src": "2032:22:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1109,10 +1183,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 72,
+                    "id": 78,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1987:6:0",
+                    "src": "2032:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1121,20 +1195,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1941:69:0"
+              "src": "1986:69:0"
             },
             "returnParameters": {
-              "id": 77,
+              "id": 83,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 76,
+                  "id": 82,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "2029:13:0",
+                  "scope": 84,
+                  "src": "2074:13:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1142,10 +1216,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 75,
+                    "id": 81,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2029:6:0",
+                    "src": "2074:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1154,40 +1228,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2028:15:0"
+              "src": "2073:15:0"
             },
-            "scope": 95,
-            "src": "1920:124:0",
+            "scope": 93,
+            "src": "1965:124:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 79,
+              "id": 85,
               "nodeType": "StructuredDocumentation",
-              "src": "2050:99:0",
+              "src": "2095:99:0",
               "text": "Allows a customer for view the price of the project that engineer add it and payed that price."
             },
             "functionSelector": "3d8f426d",
-            "id": 86,
+            "id": 92,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "accepteCustomer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 82,
+              "id": 88,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 81,
+                  "id": 87,
                   "mutability": "mutable",
                   "name": "_engineerAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 86,
-                  "src": "2179:32:0",
+                  "scope": 92,
+                  "src": "2224:32:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1195,10 +1269,10 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 80,
+                    "id": 86,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2179:15:0",
+                    "src": "2224:15:0",
                     "stateMutability": "payable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
@@ -1208,20 +1282,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2178:34:0"
+              "src": "2223:34:0"
             },
             "returnParameters": {
-              "id": 85,
+              "id": 91,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 84,
+                  "id": 90,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 86,
-                  "src": "2238:4:0",
+                  "scope": 92,
+                  "src": "2283:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1229,10 +1303,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 83,
+                    "id": 89,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2238:4:0",
+                    "src": "2283:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1241,114 +1315,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2237:6:0"
+              "src": "2282:6:0"
             },
-            "scope": 95,
-            "src": "2154:90:0",
+            "scope": 93,
+            "src": "2199:90:0",
             "stateMutability": "payable",
-            "virtual": false,
-            "visibility": "external"
-          },
-          {
-            "documentation": {
-              "id": 87,
-              "nodeType": "StructuredDocumentation",
-              "src": "2250:46:0",
-              "text": "Allows the customer for delete the project"
-            },
-            "functionSelector": "2200e21e",
-            "id": 94,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "deleteProject",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 90,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 89,
-                  "mutability": "mutable",
-                  "name": "_customerAddress",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 94,
-                  "src": "2324:24:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 88,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "2324:7:0",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "2323:26:0"
-            },
-            "returnParameters": {
-              "id": 93,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 92,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 94,
-                  "src": "2367:13:0",
-                  "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 91,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "2367:6:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "2366:15:0"
-            },
-            "scope": 95,
-            "src": "2301:81:0",
-            "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 96,
-        "src": "700:1684:0"
+        "scope": 94,
+        "src": "700:1592:0"
       }
     ],
-    "src": "32:2353:0"
+    "src": "32:2261:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/C/Users/sodaba ulomi/Desktop/wslapp/contracts/InterfaceOfCuntract.sol",
       "exportedSymbols": {
         "InterfaceOfCuntract": [
-          95
+          93
         ]
       },
       "license": "MIT"
@@ -1382,10 +1369,10 @@
           "contractKind": "interface",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            95
+            93
           ],
           "name": "InterfaceOfCuntract",
-          "scope": 96
+          "scope": 94
         },
         "children": [
           {
@@ -1406,7 +1393,7 @@
                 null
               ],
               "name": "addCustomer",
-              "scope": 95,
+              "scope": 93,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -1528,7 +1515,7 @@
                 null
               ],
               "name": "addEngineer",
-              "scope": 95,
+              "scope": 93,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -1642,7 +1629,7 @@
           },
           {
             "attributes": {
-              "functionSelector": "20943f7a",
+              "functionSelector": "d026c425",
               "implemented": false,
               "isConstructor": false,
               "kind": "function",
@@ -1650,7 +1637,7 @@
                 null
               ],
               "name": "addProject",
-              "scope": 95,
+              "scope": 93,
               "stateMutability": "payable",
               "virtual": false,
               "visibility": "external"
@@ -1671,7 +1658,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "yourName",
-                      "scope": 36,
+                      "scope": 38,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -1697,7 +1684,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "skills",
-                      "scope": 36,
+                      "scope": 38,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -1723,7 +1710,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "information",
-                      "scope": 36,
+                      "scope": 38,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -1737,19 +1724,19 @@
                         },
                         "id": 28,
                         "name": "ElementaryTypeName",
-                        "src": "1321:6:0"
+                        "src": "1326:6:0"
                       }
                     ],
                     "id": 29,
                     "name": "VariableDeclaration",
-                    "src": "1321:25:0"
+                    "src": "1326:25:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "averageOfprice",
-                      "scope": 36,
+                      "scope": 38,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1763,17 +1750,43 @@
                         },
                         "id": 30,
                         "name": "ElementaryTypeName",
-                        "src": "1347:4:0"
+                        "src": "1352:4:0"
                       }
                     ],
                     "id": 31,
                     "name": "VariableDeclaration",
-                    "src": "1347:19:0"
+                    "src": "1352:19:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "id",
+                      "scope": 38,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 32,
+                        "name": "ElementaryTypeName",
+                        "src": "1374:4:0"
+                      }
+                    ],
+                    "id": 33,
+                    "name": "VariableDeclaration",
+                    "src": "1374:7:0"
                   }
                 ],
-                "id": 32,
+                "id": 34,
                 "name": "ParameterList",
-                "src": "1276:91:0"
+                "src": "1276:106:0"
               },
               {
                 "children": [
@@ -1782,7 +1795,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 36,
+                      "scope": 38,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1794,28 +1807,28 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 33,
+                        "id": 35,
                         "name": "ElementaryTypeName",
-                        "src": "1393:4:0"
+                        "src": "1408:4:0"
                       }
                     ],
-                    "id": 34,
+                    "id": 36,
                     "name": "VariableDeclaration",
-                    "src": "1393:4:0"
+                    "src": "1408:4:0"
                   }
                 ],
-                "id": 35,
+                "id": 37,
                 "name": "ParameterList",
-                "src": "1392:6:0"
+                "src": "1407:6:0"
               }
             ],
-            "id": 36,
+            "id": 38,
             "name": "FunctionDefinition",
-            "src": "1257:142:0"
+            "src": "1257:157:0"
           },
           {
             "attributes": {
-              "functionSelector": "aede6098",
+              "functionSelector": "3c75c5fd",
               "implemented": false,
               "isConstructor": false,
               "kind": "function",
@@ -1823,7 +1836,7 @@
                 null
               ],
               "name": "EditProject",
-              "scope": 95,
+              "scope": 93,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -1833,9 +1846,9 @@
                 "attributes": {
                   "text": "Allows to Edit a project that customer add in the network."
                 },
-                "id": 37,
+                "id": 39,
                 "name": "StructuredDocumentation",
-                "src": "1405:63:0"
+                "src": "1420:63:0"
               },
               {
                 "children": [
@@ -1844,33 +1857,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "yourName",
-                      "scope": 50,
-                      "stateVariable": false,
-                      "storageLocation": "memory",
-                      "type": "string",
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "string",
-                          "type": "string"
-                        },
-                        "id": 38,
-                        "name": "ElementaryTypeName",
-                        "src": "1494:6:0"
-                      }
-                    ],
-                    "id": 39,
-                    "name": "VariableDeclaration",
-                    "src": "1494:22:0"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "skills",
-                      "scope": 50,
+                      "scope": 54,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -1884,19 +1871,19 @@
                         },
                         "id": 40,
                         "name": "ElementaryTypeName",
-                        "src": "1517:6:0"
+                        "src": "1509:6:0"
                       }
                     ],
                     "id": 41,
                     "name": "VariableDeclaration",
-                    "src": "1517:20:0"
+                    "src": "1509:22:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
-                      "name": "information",
-                      "scope": 50,
+                      "name": "skills",
+                      "scope": 54,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -1910,52 +1897,19 @@
                         },
                         "id": 42,
                         "name": "ElementaryTypeName",
-                        "src": "1538:6:0"
+                        "src": "1532:6:0"
                       }
                     ],
                     "id": 43,
                     "name": "VariableDeclaration",
-                    "src": "1538:25:0"
+                    "src": "1532:20:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
-                      "name": "averageOfprice",
-                      "scope": 50,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint",
-                          "type": "uint256"
-                        },
-                        "id": 44,
-                        "name": "ElementaryTypeName",
-                        "src": "1564:4:0"
-                      }
-                    ],
-                    "id": 45,
-                    "name": "VariableDeclaration",
-                    "src": "1564:19:0"
-                  }
-                ],
-                "id": 46,
-                "name": "ParameterList",
-                "src": "1493:91:0"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "",
-                      "scope": 50,
+                      "name": "information",
+                      "scope": 54,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -1967,24 +1921,109 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 47,
+                        "id": 44,
                         "name": "ElementaryTypeName",
-                        "src": "1603:6:0"
+                        "src": "1558:6:0"
                       }
                     ],
-                    "id": 48,
+                    "id": 45,
                     "name": "VariableDeclaration",
-                    "src": "1603:13:0"
+                    "src": "1558:25:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "averageOfprice",
+                      "scope": 54,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 46,
+                        "name": "ElementaryTypeName",
+                        "src": "1584:4:0"
+                      }
+                    ],
+                    "id": 47,
+                    "name": "VariableDeclaration",
+                    "src": "1584:19:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "id",
+                      "scope": 54,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 48,
+                        "name": "ElementaryTypeName",
+                        "src": "1605:4:0"
+                      }
+                    ],
+                    "id": 49,
+                    "name": "VariableDeclaration",
+                    "src": "1605:7:0"
                   }
                 ],
-                "id": 49,
+                "id": 50,
                 "name": "ParameterList",
-                "src": "1602:15:0"
+                "src": "1508:106:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 54,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 51,
+                        "name": "ElementaryTypeName",
+                        "src": "1633:6:0"
+                      }
+                    ],
+                    "id": 52,
+                    "name": "VariableDeclaration",
+                    "src": "1633:13:0"
+                  }
+                ],
+                "id": 53,
+                "name": "ParameterList",
+                "src": "1632:15:0"
               }
             ],
-            "id": 50,
+            "id": 54,
             "name": "FunctionDefinition",
-            "src": "1473:145:0"
+            "src": "1488:160:0"
           },
           {
             "attributes": {
@@ -1996,7 +2035,7 @@
                 null
               ],
               "name": "getProject",
-              "scope": 95,
+              "scope": 93,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -2006,9 +2045,9 @@
                 "attributes": {
                   "text": "Allows a Engineer and customer and users for view the project."
                 },
-                "id": 51,
+                "id": 55,
                 "name": "StructuredDocumentation",
-                "src": "1627:67:0"
+                "src": "1657:67:0"
               },
               {
                 "children": [
@@ -2017,7 +2056,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_customerAddress",
-                      "scope": 64,
+                      "scope": 70,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2030,19 +2069,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 52,
+                        "id": 56,
                         "name": "ElementaryTypeName",
-                        "src": "1719:7:0"
+                        "src": "1749:7:0"
                       }
                     ],
-                    "id": 53,
+                    "id": 57,
                     "name": "VariableDeclaration",
-                    "src": "1719:24:0"
+                    "src": "1749:24:0"
                   }
                 ],
-                "id": 54,
+                "id": 58,
                 "name": "ParameterList",
-                "src": "1718:26:0"
+                "src": "1748:26:0"
               },
               {
                 "children": [
@@ -2051,59 +2090,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "yourName",
-                      "scope": 64,
-                      "stateVariable": false,
-                      "storageLocation": "memory",
-                      "type": "string",
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "string",
-                          "type": "string"
-                        },
-                        "id": 55,
-                        "name": "ElementaryTypeName",
-                        "src": "1767:6:0"
-                      }
-                    ],
-                    "id": 56,
-                    "name": "VariableDeclaration",
-                    "src": "1767:22:0"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "skills",
-                      "scope": 64,
-                      "stateVariable": false,
-                      "storageLocation": "memory",
-                      "type": "string",
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "string",
-                          "type": "string"
-                        },
-                        "id": 57,
-                        "name": "ElementaryTypeName",
-                        "src": "1790:6:0"
-                      }
-                    ],
-                    "id": 58,
-                    "name": "VariableDeclaration",
-                    "src": "1790:20:0"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "information",
-                      "scope": 64,
+                      "scope": 70,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2117,19 +2104,71 @@
                         },
                         "id": 59,
                         "name": "ElementaryTypeName",
-                        "src": "1811:6:0"
+                        "src": "1797:6:0"
                       }
                     ],
                     "id": 60,
                     "name": "VariableDeclaration",
-                    "src": "1811:25:0"
+                    "src": "1797:22:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "skills",
+                      "scope": 70,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 61,
+                        "name": "ElementaryTypeName",
+                        "src": "1825:6:0"
+                      }
+                    ],
+                    "id": 62,
+                    "name": "VariableDeclaration",
+                    "src": "1825:20:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "information",
+                      "scope": 70,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 63,
+                        "name": "ElementaryTypeName",
+                        "src": "1846:6:0"
+                      }
+                    ],
+                    "id": 64,
+                    "name": "VariableDeclaration",
+                    "src": "1846:25:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "averageOfprice",
-                      "scope": 64,
+                      "scope": 70,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2141,24 +2180,50 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 61,
+                        "id": 65,
                         "name": "ElementaryTypeName",
-                        "src": "1837:4:0"
+                        "src": "1872:4:0"
                       }
                     ],
-                    "id": 62,
+                    "id": 66,
                     "name": "VariableDeclaration",
-                    "src": "1837:19:0"
+                    "src": "1872:19:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "id",
+                      "scope": 70,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 67,
+                        "name": "ElementaryTypeName",
+                        "src": "1894:4:0"
+                      }
+                    ],
+                    "id": 68,
+                    "name": "VariableDeclaration",
+                    "src": "1894:7:0"
                   }
                 ],
-                "id": 63,
+                "id": 69,
                 "name": "ParameterList",
-                "src": "1766:91:0"
+                "src": "1796:106:0"
               }
             ],
-            "id": 64,
+            "id": 70,
             "name": "FunctionDefinition",
-            "src": "1699:159:0"
+            "src": "1729:174:0"
           },
           {
             "attributes": {
@@ -2170,7 +2235,7 @@
                 null
               ],
               "name": "chooseToWork",
-              "scope": 95,
+              "scope": 93,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -2180,9 +2245,9 @@
                 "attributes": {
                   "text": "Allows a Engineer set a favorite price project."
                 },
-                "id": 65,
+                "id": 71,
                 "name": "StructuredDocumentation",
-                "src": "1864:52:0"
+                "src": "1909:52:0"
               },
               {
                 "children": [
@@ -2191,7 +2256,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_customerAddress",
-                      "scope": 78,
+                      "scope": 84,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2204,21 +2269,21 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 66,
+                        "id": 72,
                         "name": "ElementaryTypeName",
-                        "src": "1942:7:0"
+                        "src": "1987:7:0"
                       }
                     ],
-                    "id": 67,
+                    "id": 73,
                     "name": "VariableDeclaration",
-                    "src": "1942:24:0"
+                    "src": "1987:24:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "day",
-                      "scope": 78,
+                      "scope": 84,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2230,21 +2295,21 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 68,
+                        "id": 74,
                         "name": "ElementaryTypeName",
-                        "src": "1967:4:0"
+                        "src": "2012:4:0"
                       }
                     ],
-                    "id": 69,
+                    "id": 75,
                     "name": "VariableDeclaration",
-                    "src": "1967:8:0"
+                    "src": "2012:8:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "price",
-                      "scope": 78,
+                      "scope": 84,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2256,21 +2321,21 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 70,
+                        "id": 76,
                         "name": "ElementaryTypeName",
-                        "src": "1976:4:0"
+                        "src": "2021:4:0"
                       }
                     ],
-                    "id": 71,
+                    "id": 77,
                     "name": "VariableDeclaration",
-                    "src": "1976:10:0"
+                    "src": "2021:10:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "moreInfo",
-                      "scope": 78,
+                      "scope": 84,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2282,19 +2347,19 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 72,
+                        "id": 78,
                         "name": "ElementaryTypeName",
-                        "src": "1987:6:0"
+                        "src": "2032:6:0"
                       }
                     ],
-                    "id": 73,
+                    "id": 79,
                     "name": "VariableDeclaration",
-                    "src": "1987:22:0"
+                    "src": "2032:22:0"
                   }
                 ],
-                "id": 74,
+                "id": 80,
                 "name": "ParameterList",
-                "src": "1941:69:0"
+                "src": "1986:69:0"
               },
               {
                 "children": [
@@ -2303,7 +2368,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 78,
+                      "scope": 84,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2315,24 +2380,24 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 75,
+                        "id": 81,
                         "name": "ElementaryTypeName",
-                        "src": "2029:6:0"
+                        "src": "2074:6:0"
                       }
                     ],
-                    "id": 76,
+                    "id": 82,
                     "name": "VariableDeclaration",
-                    "src": "2029:13:0"
+                    "src": "2074:13:0"
                   }
                 ],
-                "id": 77,
+                "id": 83,
                 "name": "ParameterList",
-                "src": "2028:15:0"
+                "src": "2073:15:0"
               }
             ],
-            "id": 78,
+            "id": 84,
             "name": "FunctionDefinition",
-            "src": "1920:124:0"
+            "src": "1965:124:0"
           },
           {
             "attributes": {
@@ -2344,7 +2409,7 @@
                 null
               ],
               "name": "accepteCustomer",
-              "scope": 95,
+              "scope": 93,
               "stateMutability": "payable",
               "virtual": false,
               "visibility": "external"
@@ -2354,9 +2419,9 @@
                 "attributes": {
                   "text": "Allows a customer for view the price of the project that engineer add it and payed that price."
                 },
-                "id": 79,
+                "id": 85,
                 "name": "StructuredDocumentation",
-                "src": "2050:99:0"
+                "src": "2095:99:0"
               },
               {
                 "children": [
@@ -2365,7 +2430,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "_engineerAddress",
-                      "scope": 86,
+                      "scope": 92,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -2378,19 +2443,19 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 80,
+                        "id": 86,
                         "name": "ElementaryTypeName",
-                        "src": "2179:15:0"
+                        "src": "2224:15:0"
                       }
                     ],
-                    "id": 81,
+                    "id": 87,
                     "name": "VariableDeclaration",
-                    "src": "2179:32:0"
+                    "src": "2224:32:0"
                   }
                 ],
-                "id": 82,
+                "id": 88,
                 "name": "ParameterList",
-                "src": "2178:34:0"
+                "src": "2223:34:0"
               },
               {
                 "children": [
@@ -2399,7 +2464,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 86,
+                      "scope": 92,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -2411,130 +2476,34 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 83,
+                        "id": 89,
                         "name": "ElementaryTypeName",
-                        "src": "2238:4:0"
+                        "src": "2283:4:0"
                       }
                     ],
-                    "id": 84,
+                    "id": 90,
                     "name": "VariableDeclaration",
-                    "src": "2238:4:0"
+                    "src": "2283:4:0"
                   }
                 ],
-                "id": 85,
+                "id": 91,
                 "name": "ParameterList",
-                "src": "2237:6:0"
+                "src": "2282:6:0"
               }
             ],
-            "id": 86,
+            "id": 92,
             "name": "FunctionDefinition",
-            "src": "2154:90:0"
-          },
-          {
-            "attributes": {
-              "functionSelector": "2200e21e",
-              "implemented": false,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "deleteProject",
-              "scope": 95,
-              "stateMutability": "nonpayable",
-              "virtual": false,
-              "visibility": "external"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "text": "Allows the customer for delete the project"
-                },
-                "id": 87,
-                "name": "StructuredDocumentation",
-                "src": "2250:46:0"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "_customerAddress",
-                      "scope": 94,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "stateMutability": "nonpayable",
-                          "type": "address"
-                        },
-                        "id": 88,
-                        "name": "ElementaryTypeName",
-                        "src": "2324:7:0"
-                      }
-                    ],
-                    "id": 89,
-                    "name": "VariableDeclaration",
-                    "src": "2324:24:0"
-                  }
-                ],
-                "id": 90,
-                "name": "ParameterList",
-                "src": "2323:26:0"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "mutability": "mutable",
-                      "name": "",
-                      "scope": 94,
-                      "stateVariable": false,
-                      "storageLocation": "memory",
-                      "type": "string",
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "string",
-                          "type": "string"
-                        },
-                        "id": 91,
-                        "name": "ElementaryTypeName",
-                        "src": "2367:6:0"
-                      }
-                    ],
-                    "id": 92,
-                    "name": "VariableDeclaration",
-                    "src": "2367:13:0"
-                  }
-                ],
-                "id": 93,
-                "name": "ParameterList",
-                "src": "2366:15:0"
-              }
-            ],
-            "id": 94,
-            "name": "FunctionDefinition",
-            "src": "2301:81:0"
+            "src": "2199:90:0"
           }
         ],
-        "id": 95,
+        "id": 93,
         "name": "ContractDefinition",
-        "src": "700:1684:0"
+        "src": "700:1592:0"
       }
     ],
-    "id": 96,
+    "id": 94,
     "name": "SourceUnit",
-    "src": "32:2353:0"
+    "src": "32:2261:0"
   },
   "compiler": {
     "name": "solc",
@@ -2542,7 +2511,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2022-01-10T18:06:57.991Z",
+  "updatedAt": "2022-01-12T11:28:29.902Z",
   "devdoc": {
     "author": "veeda baha - <veedabaha@gmail.com> Allows the customer to add their project or works in to the network. Projects can be accessed by customers and Engineers . The customers can be shared or add ,get,edit and delete their projects  The engineers can allow to see the record of the project. after the Engineer select a project for doing that set a value or price to that project. The custommer can see the price or value that Engineer add in to the system. The finally the customer can accepte one of thoes values and payed the ether to engineer.",
     "kind": "dev",
@@ -2552,7 +2521,7 @@
   "userdoc": {
     "kind": "user",
     "methods": {
-      "EditProject(string,string,string,uint256)": {
+      "EditProject(string,string,string,uint256,uint256)": {
         "notice": "Allows to Edit a project that customer add in the network."
       },
       "accepteCustomer(address)": {
@@ -2564,14 +2533,11 @@
       "addEngineer(address,string)": {
         "notice": "Allows to add a new engineer in the network."
       },
-      "addProject(string,string,string,uint256)": {
+      "addProject(string,string,string,uint256,uint256)": {
         "notice": "Allows to add a project by customer in the network."
       },
       "chooseToWork(address,uint256,uint256,string)": {
         "notice": "Allows a Engineer set a favorite price project."
-      },
-      "deleteProject(address)": {
-        "notice": "Allows the customer for delete the project"
       },
       "getProject(address)": {
         "notice": "Allows a Engineer and customer and users for view the project."

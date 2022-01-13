@@ -2,18 +2,18 @@
     <main>
 
       <div class="card card-1" >
-        <h1> Edit your Project </h1><br><br> 
+        <h1> Enter your information</h1><br><br> 
          <div class="box form">
-          <form action="" @click="EditProject()" >
+          <form action="" @click="chooseToWork()" >
           <v-row> 
           <v-col col="6" sm="5" >
             <div>
               <input 
               type="text" 
-              v-model="Name" 
-              id="name" 
+              v-model="customerAddress" 
+              id="customerAddress" 
               required placeholder=" ">
-              <label>Your Project Name </label>
+              <label>Customer Address </label>
             </div>
           </v-col>
           <v-col sm="1"></v-col>
@@ -21,22 +21,14 @@
             <div>
               <input 
               type="text" 
-              v-model="id" 
-              id="id" 
+              v-model="day" 
+              id="day" 
               required placeholder=" ">
-              <label>Your Project Id </label>
+              <label>day </label>
             </div>
           </v-col>
            <v-col sm="1"></v-col>
-          <v-col col="6" sm="5" >
-            <div>
-              <input 
-              v-model="Skill" 
-              name="" 
-              required placeholder=" "/>
-              <label>What Skill need your project? </label>
-            </div>
-          </v-col>
+         
         </v-row>
 
         <v-row>
@@ -57,8 +49,8 @@
               <input 
               type="text" name="" 
               required placeholder=" " 
-              v-model="averageOfprice">
-              <label>How match money will you payed </label>
+              v-model="price">
+              <label>price </label>
              
             </div>
           </v-col>
@@ -74,38 +66,42 @@
 
 <script>
 import App from "../index.js";
+import api from "../../api/project"
 export default {
     data(){
         return{
            
-            Name: null,
-            Skill: null,
+            customerAddress: null,
+            day: null,
             information: null,
-            averageOfprice: null,
-            id:null,
+            price: null,
+            
            
      
         }
     },
     methods: {
-        async EditProject() {
+        async chooseToWork() {
         let Project = {
          
-            Name: this.Name,
-            Skill: this.Skill,
+            customerAddress: this.customerAddress,
+            day: this.day,
+            price : this.price,
             information: this.information,
-            averageOfprice: this.averageOfprice,
-            id:this.id,
+           
+            
            
         }
-        let saved = await App.App.EditProject( Project.Name, Project.Skill,Project.information, Project.averageOfprice , Project.id)
+        let saved = await App.App.chooseToWork( Project.customerAddress,Project.day,Project.price ,Project.information)
+        api.addEnginer(Project.customerAddress,Project.day,Project.price ,Project.information);
         console.log(saved);
         
-        this.Name = null;
-        this.Skill = null;
+        this.customerAddress = null;
+        this.day = null;
+        this.price = null;
         this.information = null;
-        this.averageOfprice = null;
-        this.id = null;
+        
+       
      
    }
   },

@@ -1,7 +1,7 @@
 
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.24 <0.9.0;
-/// @title supply chain in small daily business 
+// @title supply chain in small daily business 
 /// @author veeda baha - <veedabaha@gmail.com>
 /// Allows the customer to add their project or works in to the network.
 /// Projects can be accessed by customers and Engineers .
@@ -286,8 +286,7 @@ contract SmallBusiness is InterfaceOfCuntract{
     
     }
       // get project parameters
-    function getProject(address _customerAddress) public view override verifyCaller(msg.sender) forSell(_customerAddress)returns (string memory Name,string memory skills, string memory information,uint averageOfprice , uint id )   
-    {
+    function getProject(address _customerAddress) public view override verifyCaller(msg.sender) forSell(_customerAddress)returns (string memory Name,string memory skills, string memory information,uint averageOfprice , uint id ){
         Project storage p = projects[_customerAddress];
         return (p.Name,p.skills,p.information,p.averageOfprice  , p.id ); 
     }

@@ -18,6 +18,17 @@
           <v-col col="6" sm="5" >
             <div>
               <input 
+              type="text" 
+              v-model="id" 
+              id="id" 
+              required placeholder=" ">
+              <label>Your Project Id </label>
+            </div>
+          </v-col>
+          <v-col sm="1"></v-col>
+          <v-col col="6" sm="5" >
+            <div>
+              <input 
               v-model="Skill" 
               name="" 
               required placeholder=" "/>
@@ -61,6 +72,7 @@
 
 <script>
 import App from "../index.js";
+import api from "../../api/project"
 export default {
     data(){
         return{
@@ -69,6 +81,7 @@ export default {
             Skill: null,
             information: null,
             averageOfprice: null,
+            id :null,
            
      
         }
@@ -81,15 +94,19 @@ export default {
             Skill: this.Skill,
             information: this.information,
             averageOfprice: this.averageOfprice,
+            id : this.id,
            
         }
-        let saved = await App.App.addProject( Project.Name, Project.Skill, Project.information, Project.averageOfprice)
+        let saved = await App.App.addProject( Project.Name, Project.Skill, Project.information
+        , Project.averageOfprice , Project.id)
         console.log(saved);
+        api.addProject(Project.id, Project.Name, Project.Skill, Project.information, Project.averageOfprice );
         
         this.Name = null;
         this.Skill = null;
         this.information = null;
         this.averageOfprice = null;
+        this.id = null;
      
    }
   },
