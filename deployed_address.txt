@@ -1,10 +1,5 @@
-<<<<<<< HEAD
+
 Address: 0xF6945FB577cf5b8AAef68c531cCdD9740EbA72Be
 Network: Gnache 
 Local:   http://localhost:8080/ 
-=======
-Address: 0xF6945FB577cf5b8AAef68c531cCdD9740EbA72Be
-Network: Gnache 
-Local:   http://localhost:8080/ 
-Network: http://127.0.0.1:8080/
->>>>>>> a6ced69932e2fc11f86868cd393933107c27a162
+

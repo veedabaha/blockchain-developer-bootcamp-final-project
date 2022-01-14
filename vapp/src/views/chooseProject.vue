@@ -4,7 +4,7 @@
       <div class="card card-1" >
         <h1> Enter your information</h1><br><br> 
          <div class="box form">
-          <form action="" @click="chooseToWork()" >
+          <form @click="chooseToWork()" >
           <v-row> 
           <v-col col="6" sm="5" >
             <div>
@@ -56,7 +56,8 @@
           </v-col>
         </v-row>
 
-        <v-btn id="submit">Save</v-btn>
+      <router-link to="/setValue" class="btn btn-dark" > save </router-link>
+
 </form>
    
      </div>
@@ -110,25 +111,6 @@ export default {
 </script>
 
 <style scoped>
-body {
-  text-align: center;
-
-}
-
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-  transition: all 1s;
-  text-decoration: none;
-}
-
-html, body{
-	font-family: 'Open Sans Condensed', sans-serif;
-	letter-spacing: 0.2em;
-	font-size: 0.98em;  
-  /*min-height: 100%;*/
-} 
 
 /* === Wrapper  ===*/
 .wrapper{
@@ -151,16 +133,16 @@ html, body{
     background-color: #FFF;
     padding: 40px;
     box-sizing: border-box;
-    border: 1px solid rgba(0,0,0,.1);
+    border: 1px solid rgba(180, 169, 118, 0.1);
     /* box-shadow: 0 30px 20px rgba(0,0,0,.2); */
-    box-shadow: 0 3px 60px rgba(57,73,76,0.35);
+    box-shadow: 0 3px 60px rgba(185, 140, 58, 0.35);
   
 }
 
 .box h2{
 	margin: 0 0 40px;
 	padding: 0;
-	color: #222;
+	color: rgb(165, 104, 55);
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -186,7 +168,7 @@ html, body{
   background: linear-gradient(-60deg, #c47806, #d3701f, #b86127);
 	animation: gradient 20s ease-in-out infinite;
   outline: none;
-	color: #FFF;
+	color: rgb(10, 1, 1);
 	margin: 5px;
   padding: 10px;
 	text-transform: uppercase;

@@ -1,9 +1,14 @@
 <template>
 <div>
-  <button @click="accepteCustomer('0xE017b76Ed73e93eab505b55c2A4B07B7A2B56cB5')">accepteCustomer</button>
-  <button @click="halfPayment('0xc660f3f39A078Df492f2157Ffb2e220AA1dd8e77')">halfPayment</button>
-  <button @click="finishTheProject('0xc660f3f39A078Df492f2157Ffb2e220AA1dd8e77')">finishTheProject</button>
-  <button @click="_passthevalue()">passthevalue</button>
+    <p>if you accept the price that Engineer set you payed the 20% the price : </p>
+    <button class="btn btn-dark" @click="accepteCustomer('0xE017b76Ed73e93eab505b55c2A4B07B7A2B56cB5')">accepteCustomer</button>
+    <p> you payed the 50% the price : </p>   
+    <button class="btn btn-dark" @click="halfPayment('0xc660f3f39A078Df492f2157Ffb2e220AA1dd8e77')">halfPayment</button>
+    <p>you payed the 70% the price and finish the project : </p>
+    <button class="btn btn-dark" @click="halfPayment('0xc660f3f39A078Df492f2157Ffb2e220AA1dd8e77')">finishTheProject</button>
+    <p>return the value may have on contract : </p>
+    <button class="btn btn-dark" @click="_passthevalue()">passthevalue</button>
+    
   </div>
 </template>
 

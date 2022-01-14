@@ -52,7 +52,7 @@ export default {
             </div>
           </v-col>
         </v-row>
-        <input type="submit" id="submit">
+        <input type="submit" id="btn">
       </form>
  </div>
  </div>

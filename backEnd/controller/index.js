@@ -19,7 +19,7 @@ exports.addProject= (req,res)=>{
      })
      
      project.save() ;
-     console.log('books created',id, Name , skills , information , averageOfprice);
+     console.log('Projects created',id, Name , skills , information , averageOfprice);
     
   },
   

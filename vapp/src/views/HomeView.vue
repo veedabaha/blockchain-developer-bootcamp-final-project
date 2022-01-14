@@ -1,22 +1,16 @@
-<script setup >
-// import TheWelcome from '@/components/TheWelcome.vue'
 
-
-</script>
 
 <template>
   <div>
-    <header>
-    <!-- <TheWelcome /> -->
-  </header>
+  
   <main>
     <div class="btn">
       
     <h1>The Best Way For Any Job,</h1>
     <p>The projects in the etherum chain for doing and earn the money</p>
       <p>choess one : </p>
-      <a href="/addCustomer">Post A project</a> 
-      <a href="/addEngineer">Earn money Engineer</a>
+      <router-link to="/addCustomer">Post A project</router-link> 
+      <router-link to="/addEngineer">Earn money Engineer</router-link>
     </div>
     <hr>
     <div class="btn">
@@ -40,12 +34,7 @@
    </div>
     <hr>
    <div>
-       <h1>The projects for doing : </h1>
-      <div class="flex" >
-        <div class="flex-container"> <h2></h2>
-        <p>It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes</p></div>
-        
-        </div>
+      <h1>footer</h1>
    </div>
   </main>
 

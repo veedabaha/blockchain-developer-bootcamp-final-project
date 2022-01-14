@@ -9,7 +9,11 @@ import addProject from "../views/addProject.vue";
 import Projects from "../views/Projects.vue";
 import EditProject from "../views/EditProject.vue";
 import chooseProject from "../views/chooseProject";
-import enginer from "../views/enginer"
+import enginer from "../views/enginer";
+import setValue from "../views/setPrice.vue";
+import Values from "../views/Values.vue";
+
+
 
 Vue.use(VueRouter);
 const routes = [
@@ -59,6 +63,18 @@ const routes = [
       path: '/ProjectEdit',
       name: 'EditProject',
       component:EditProject
+    }
+    ,
+    {
+      path: '/setValue',
+      name: 'setValue',
+      component:setValue
+    }
+    ,
+    {
+      path: '/Values',
+      name: 'Values',
+      component:Values
     }
 
   ]

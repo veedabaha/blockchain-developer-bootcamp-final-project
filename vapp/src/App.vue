@@ -1,18 +1,22 @@
 <template>
 <div>
   <header>
-    <img alt=" logo" class="logo" src="@/assets/white-logo.png" width="200" height="200" />
+  <div class="l">
+      <img alt=" logo" class="l" src="@/assets/white-logo.png" width="250" height="200" />
+    <HelloWorld class="l"/>
 
+  </div>
     <div class="wrapper">
-      <!-- <HelloWorld msg="Your Projects Will Done!"/> -->
+      
 
-      <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/addProject">addprojects</router-link>
-        <router-link to="/Projects">projects</router-link>
+      <nav class="nav">
+        <router-link class="btn btn-warning" to="/">Home</router-link>
+        <router-link class="btn btn-warning" to="/addProject">addprojects</router-link>
+        <router-link class="btn btn-warning" to="/Projects">projects</router-link>
+        <router-link class="btn btn-warning" to="/Values">Values</router-link>
+        <router-link class="btn btn-warning" to="/setValue">set Value</router-link>
+        <router-link class="btn btn-warning" to="/about">About</router-link>
 
-        
       </nav>
     </div>
   </header>
@@ -20,14 +24,23 @@
    </div>
   
 </template>
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+export default {
+  components:{
+    HelloWorld:HelloWorld
+  }
+  
+  }
+</script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #50402c; */
 }
 
 #nav {
@@ -36,10 +49,14 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #50422c;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #b97b42;
 }
+.l{
+  display: inline-block;
+}
+
 </style>

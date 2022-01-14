@@ -1,10 +1,11 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
+<script >
+export default {
+ data() {
+   return {
+      msg:"Your Projects Will Done!"
+   }
+ },
+}
 </script>
 
 <template>
