@@ -290,12 +290,9 @@ contract SmallBusiness is InterfaceOfCuntract{
     
     }
       // get project parameters
-<<<<<<< HEAD
-    function getProject(address _customerAddress) public view override verifyCaller(msg.sender) forSell(_customerAddress)returns (string memory Name,string memory skills, string memory information,uint averageOfprice , uint id ){
-=======
+
     function getProject(address _customerAddress) public view override verifyCaller(msg.sender) forSell(_customerAddress)returns (string memory Name,string memory skills, string memory information,uint averageOfprice , uint id )   
     {
->>>>>>> a6ced69932e2fc11f86868cd393933107c27a162
         Project storage p = projects[_customerAddress];
         return (p.Name,p.skills,p.information,p.averageOfprice  , p.id ); 
     }
