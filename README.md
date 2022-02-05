@@ -53,6 +53,8 @@ git clone https://github.com/veedabaha/blockchain-developer-bootcamp-final-proje
 - Open `http://localhost:8080/` 
 
 # BackEnd 
+- `cd vapp`
+- `npm install`
 - run server `npm start`
 - Open `http://localhost:3000/`
 
