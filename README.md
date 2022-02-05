@@ -24,10 +24,6 @@ Run local testnet in port 7545 with an Ethereum client, e.g. Ganache
 
 In truffle-config.js file , Fill in the following below.
 
-MNEMONIC=" your mnemonic here in quotes"
-
-INFURA_URL=insert your infura url
-
 truffle migrate --network ropsten
 
 Run tests truffle test
@@ -37,6 +33,8 @@ Run tests truffle test
 - Node.js >= v16
 - Truffle and Ganache
 - npm
+- mongodb
+
 # Contracts
 - Clone code 
  ``
@@ -46,10 +44,6 @@ git clone https://github.com/veedabaha/blockchain-developer-bootcamp-final-proje
 - Run local testnet in port `7545` with an Ethereum client, e.g. Ganache
 - `truffle migrate --network development `
 - In truffle-config.js file , Fill in the following below.
-  - MNEMONIC=" your mnemonic here in quotes"
-  - INFURA_URL=insert your infura url
-  - `truffle migrate --network ropsten `
-
 - Run tests `truffle test`
 
 # Frontend
@@ -57,6 +51,10 @@ git clone https://github.com/veedabaha/blockchain-developer-bootcamp-final-proje
 - `npm install`
 - `npm run serve`
 - Open `http://localhost:8080/` 
+
+# BackEnd 
+- run server `npm start`
+- Open `http://localhost:3000/`
 
 # structure
 -`contracts`:  In this folder, the InterfaceOfCuntract.sol interface of the contract and have abstract methods.
